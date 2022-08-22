@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.column {
+  flex-grow: 1;
+  background: #fff;
+  min-height: 300px;
+  padding: 20px;
+  box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+}

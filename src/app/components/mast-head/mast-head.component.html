@@ -1,0 +1,26 @@
+<div id="mastHeadContainer">
+  <button class="navShowHide" (click)="showHideSideNav()">
+    <img src="assets/images/icons/menu.png" alt="berger menu icon">
+  </button>
+  <a routerLink="/" class="logoContainer">
+    <img src="assets/images/icons/VideoTubeLogo.png" alt="Site Logo" title="Logo">
+  </a>
+  <div class="searchBarContainer">
+    <form>
+      <input type="text" name="search" class="searchBar" placeholder="Search...">
+      <button class="searchButton">
+        <img src="assets/images/icons/search.png" alt="search button">
+      </button>
+    </form>
+  </div>
+  <div class="rightIcons">
+    <a href="#">
+      <img src="assets/images/profilePictures/default.png" alt="search button">
+    </a>
+    <a routerLink="/upload">
+      <img src="assets/images/icons/upload.png" alt="search button">
+    </a>
+    <a routerLink="/signin" class="btn btn-sm btn-primary mx-3">Sign In</a>
+    <!--<button routerLink="/signin" class="btn btn-primary">Sign In</button>-->
+  </div>
+</div>

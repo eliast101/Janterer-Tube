@@ -1,0 +1,16 @@
+<!--<app-mast-head></app-mast-head>
+<app-side-nav></app-side-nav>-->
+<div class="watchLeftColumn">
+<!--  <router-outlet></router-outlet>-->
+  <div class="playing-section">
+    <ng-container *ngIf="video">
+      <app-video-player [videoMetadata]="video" [isAutoplay]="true"></app-video-player>
+    </ng-container>
+    <ng-container *ngIf="video">
+      <app-video-info [videoInfo]="video"></app-video-info>
+    </ng-container>
+  </div>
+  <div class="suggestion">
+    This is suggestions block
+  </div>
+</div>

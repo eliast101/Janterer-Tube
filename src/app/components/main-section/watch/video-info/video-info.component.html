@@ -1,0 +1,36 @@
+<ng-container *ngIf="videoInfo">
+  <div class="videoInfo">
+    <h1>{{ videoInfo.title }}</h1>
+    <div class="bottomSection">
+      <span class="viewCount">{{ videoInfo.views }} views <span style="font-weight: 800;"><span>.</span></span> {{ videoInfo.uploadedDate | date }}</span>
+      <app-video-info-controls [stylesInput]="['video-controls']" [videoInfoForCtrl]="videoInfo" [controlType]="'video'"></app-video-info-controls>
+    </div>
+  </div>
+  <div class="secondaryInfo">
+    <div class="topRow">
+      <!--<a href="#">
+        <img src="assets/images/profilePictures/default.png" alt="User Profile Picture" class="profilePicture">
+      </a>-->
+      <app-user-profile-button [profilePicture]="'assets/images/profilePictures/default.png'" [styleClasses]="['profilePicture']"></app-user-profile-button>
+      <div class="uploadInfo">
+        <span class="owner">
+          <a href="#">{{ videoInfo.uploadedBy }}</a>
+        </span>
+        <span class="subscribersCount">
+          {{ subscribersCount }} Subscribers
+        </span>
+      </div>
+      <div [ngClass]="videoInfo.uploadedBy === loggedInUsername ? 'editVideoButtonContainer' : 'subscribeButtonContainer'">
+        <a (click)="videoInfo.uploadedBy === loggedInUsername ? editVideo() : subscribe()">
+          <button [ngClass]="videoInfo.uploadedBy === loggedInUsername ? 'button edit': (isSubscribed ? 'button unsubscribe': 'button subscribe')">
+            <span class="text">{{ videoInfo.uploadedBy === loggedInUsername ? 'EDIT VIDEO': (isSubscribed ? 'SUBSCRIBED': 'SUBSCRIBE') }}</span>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="descriptionContainer">
+      {{ videoInfo.description }}
+    </div>
+  </div>
+  <app-comment-section [videoData]="videoInfo"></app-comment-section>
+</ng-container>

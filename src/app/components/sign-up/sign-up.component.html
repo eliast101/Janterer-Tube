@@ -1,0 +1,56 @@
+<div class="signInContainer">
+  <div class="column">
+    <div class="header">
+      <a routerLink="/">
+        <img src="assets/images/icons/VideoTubeLogo.png" alt="Site Logo">
+      </a>
+      <h3>Sign Up</h3>
+      <span>To continue to Video Tube</span>
+    </div>
+    <div class="loginForm">
+      <form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)">
+        <input type="text" name="firstName" placeholder="First Name" required minlength="2" maxlength="25" pattern="^[a-zA-Z]+$" #firstNameVar="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="firstNameVar.touched && firstNameVar.errors?.required">{{ formErrorMessages.FIRST_NAME_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="firstNameVar.touched && firstNameVar.errors?.minlength">{{ formErrorMessages.FIRST_NAME_MIN_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="firstNameVar.touched && firstNameVar.errors?.maxlength">{{ formErrorMessages.FIRST_NAME_MAX_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="firstNameVar.touched && firstNameVar.errors?.pattern">{{ formErrorMessages.FIRST_NAME_NON_ALPHABET_ERROR }}</p>
+
+        <input type="text" name="lastName" placeholder="Last Name" required minlength="2" maxlength="25" pattern="^[a-zA-Z]+$" #lastNameVar="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="lastNameVar.touched && lastNameVar.errors?.required">{{ formErrorMessages.LAST_NAME_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="lastNameVar.touched && lastNameVar.errors?.minlength">{{ formErrorMessages.LAST_NAME_MIN_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="lastNameVar.touched && lastNameVar.errors?.maxlength">{{ formErrorMessages.LAST_NAME_MAX_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="lastNameVar.touched && lastNameVar.errors?.pattern">{{ formErrorMessages.LAST_NAME_NON_ALPHABET_ERROR }}</p>
+
+        <input type="text" name="username" placeholder="Username" required appAlreadyExistsValidator minlength="4" maxlength="25" #usernameVar="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="usernameVar.touched && usernameVar.errors?.required">{{ formErrorMessages.USERNAME_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="usernameVar.touched && usernameVar.errors?.minlength">{{ formErrorMessages.USERNAME_MIN_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="usernameVar.touched && usernameVar.errors?.maxlength">{{ formErrorMessages.USERNAME_MAX_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="usernameVar.touched && usernameVar.errors?.userExists">{{ formErrorMessages.USERNAME_EXISTS }}</p>
+
+        <input type="email" name="email" placeholder="Email" required email appAlreadyExistsValidator #emailVar="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="emailVar.touched && emailVar.errors?.required">{{ formErrorMessages.EMAIL_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="emailVar.touched && emailVar.errors?.email">{{ formErrorMessages.EMAIL_PATTERN_ERROR }}</p>
+        <p class="errorMessage" *ngIf="emailVar.touched && emailVar.errors?.userExists">{{ formErrorMessages.EMAIL_EXISTS }}</p>
+
+        <!-- appValueMatching is a directive and  otherValControl is a property on the directive -->
+        <input type="email" name="email2" placeholder="Confirm Email" required email appValueMatching [otherValControl]="emailVar.control" #email2Var="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="email2Var.touched && email2Var.errors?.required">{{ formErrorMessages.EMAIL_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="email2Var.touched && email2Var.errors?.email">{{ formErrorMessages.EMAIL_PATTERN_ERROR }}</p>
+        <p class="errorMessage" *ngIf="email2Var.touched && email2Var.errors?.valueMatch">{{ formErrorMessages.EMAIL_MISMATCH_ERROR }}</p>
+
+        <input type="password" name="password" placeholder="Password" required minlength="6" maxlength="25" #passwordVar="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="passwordVar.touched && passwordVar.errors?.required">{{ formErrorMessages.PASSWORD_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="passwordVar.touched && passwordVar.errors?.minlength">{{ formErrorMessages.PASSWORD_MIN_LENGTH_ERROR }}</p>
+        <p class="errorMessage" *ngIf="passwordVar.touched && passwordVar.errors?.maxlength">{{ formErrorMessages.PASSWORD_MAX_LENGTH_ERROR }}</p>
+
+        <input type="password" name="password2" placeholder="Confirm Password" required appValueMatching [otherValControl]="passwordVar.control" #password2Var="ngModel" ngModel>
+        <p class="errorMessage" *ngIf="password2Var.touched && password2Var.errors?.required">{{ formErrorMessages.PASSWORD_REQUIRED_ERROR }}</p>
+        <p class="errorMessage" *ngIf="password2Var.touched && password2Var.errors?.valueMatch">{{ formErrorMessages.PASSWORD_MISMATCH_ERROR }}</p>
+
+        <input type="submit" name="submitButton" value="Sign Up" [disabled]="!signUpForm.valid">
+        <!--<button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>-->
+      </form>
+      <a routerLink="/signin" class="signInMessage">Already have an account? Sign in here!</a>
+    </div>
+  </div>
+</div>

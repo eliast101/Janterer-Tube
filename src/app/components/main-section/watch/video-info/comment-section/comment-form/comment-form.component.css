@@ -1,0 +1,32 @@
+:host .commentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+:host .commentForm .commentTop {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+:host .commentForm .commentBottom {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+:host .commentForm .commentTop .commentBody {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  font-size: 14px;
+  background: transparent;
+  color: #111111;
+  resize: none;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+:host .commentForm .commentTop .commentBody:focus {
+  outline: none;
+  border-bottom: solid 2px #111111;
+}

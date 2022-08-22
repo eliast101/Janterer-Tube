@@ -1,0 +1,23 @@
+<div class="signInContainer">
+  <div class="column">
+    <div class="header">
+      <a routerLink="/">
+        <img src="assets/images/icons/VideoTubeLogo.png" alt="Site Logo">
+      </a>
+      <h3>Sign In</h3>
+      <span>To continue to Video Tube</span>
+    </div>
+    <div class="loginForm">
+      <form #signInForm="ngForm" (ngSubmit)="signIn(signInForm)">
+        <p class="errorMessage" *ngIf="!loginSuccessful && loginSubmitted">{{ formErrorMessages.USERNAME_PASSWORD_INCORRECT }}</p>
+        <input type="text" name="username" placeholder="Username" required ngModel #usernameRef="ngModel">
+        <p class="errorMessage" *ngIf="usernameRef.touched && usernameRef.errors?.required">{{ formErrorMessages.USERNAME_REQUIRED_ERROR }}</p>
+        <input type="password" name="password" placeholder="Password" required ngModel #passwordRef="ngModel">
+        <p class="errorMessage" *ngIf="passwordRef.touched && passwordRef.errors?.required">{{ formErrorMessages.PASSWORD_REQUIRED_ERROR }}</p>
+        <input type="submit" name="submitButton" value="Sign In" [disabled]="">
+      </form>
+      <a routerLink="/signup" class="signInMessage">Don't have an account? Sign up here!</a>
+
+    </div>
+  </div>
+</div>

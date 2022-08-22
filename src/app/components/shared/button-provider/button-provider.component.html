@@ -1,0 +1,4 @@
+<button [ngClass]="buttonInput?.clazz" (click)="onButtonClick(buttonInput.action)">
+  <img *ngIf="buttonInput?.imageSrc && buttonInput?.imageSrc !== ''" [src]="buttonInput.imageSrc" [ngClass]="additionalStyles" alt="button image">
+  <span *ngIf="buttonInput?.text && buttonInput?.text !== '' && buttonInput.text !== '0'" class="text">{{ buttonInput.text }}</span>
+</button>

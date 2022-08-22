@@ -1,0 +1,259 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Film & Animation"
+    },
+    {
+      "id": 2,
+      "name": "Autos & Vehicles"
+    },
+    {
+      "id": 3,
+      "name": "Music"
+    },
+    {
+      "id": 4,
+      "name": "Pets and Animals"
+    },
+    {
+      "id": 5,
+      "name": "Sports"
+    },
+    {
+      "id": 6,
+      "name": "Travel & Events"
+    },
+    {
+      "id": 7,
+      "name": "Gaming"
+    },
+    {
+      "id": 8,
+      "name": "People & Blogs"
+    },
+    {
+      "id": 9,
+      "name": "Comedy"
+    },
+    {
+      "id": 10,
+      "name": "Entertainment"
+    },
+    {
+      "id": 11,
+      "name": "News & Politics"
+    },
+    {
+      "id": 12,
+      "name": "Howto & Style"
+    },
+    {
+      "id": 13,
+      "name": "Education"
+    },
+    {
+      "id": 14,
+      "name": "Science & Technology"
+    },
+    {
+      "id": 15,
+      "name": "Nonprofits & Activism"
+    }
+  ],
+  "videos": [
+    {
+      "uploadedBy": "ela101",
+      "views": 667,
+      "title": "Rosalia - La Llorona",
+      "description": "Rosalia singing La Llorona live",
+      "privacy": "1",
+      "filePath": "http://localhost:8081/uploads/videos/a7986c27-325d-4b09-8ca2-2eda5eb4a315_Rosalia_-_La_Llorona_live.mp4",
+      "category": "3",
+      "uploadedDate": "2022-01-08T03:22:37.502Z",
+      "duration": "02:05",
+      "id": 1
+    },
+    {
+      "uploadedBy": "sarahthomas",
+      "views": 3698,
+      "title": "Rahel Getu - Ayene Ayechelem",
+      "description": "Rahel Getu performing Ayene Ayechelem live",
+      "privacy": "1",
+      "filePath": "http://localhost:8081/uploads/videos/43035cb1-8afc-4d90-a4c6-e3185c158f90_Rahel_Getu_-_Ayene_Aychelem.mp4",
+      "category": "3",
+      "uploadedDate": "2022-01-08T05:47:03.961Z",
+      "duration": "04:17",
+      "id": 2
+    }
+  ],
+  "thumbnails": [
+    {
+      "videoId": 1,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/b53eae90-d82e-452e-bd6a-7e8aa8bd360c.jpg",
+      "selected": 0,
+      "id": 1
+    },
+    {
+      "videoId": 1,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/7ebcd0c3-bde9-4ae9-acab-bb4a1d9a45b4.jpg",
+      "selected": 0,
+      "id": 2
+    },
+    {
+      "videoId": 1,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/723335a6-a440-4f8f-a8d9-bde293f0ecac.jpg",
+      "selected": 0,
+      "id": 3
+    },
+    {
+      "videoId": 2,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/26d92938-9fbc-4317-aeed-5de47c0f52d7.jpg",
+      "selected": 0,
+      "id": 4
+    },
+    {
+      "videoId": 2,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/073f9101-e92e-4de9-b83f-7c68a3a627cc.jpg",
+      "selected": 0,
+      "id": 5
+    },
+    {
+      "videoId": 2,
+      "filePath": "http://localhost:8081/uploads/videos/thumbnails/10a757fa-84a4-4253-b346-57103ba7bfe8.jpg",
+      "selected": 0,
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Elias",
+      "lastName": "Tefera",
+      "username": "ela101",
+      "email": "elorhyme@gmail.com",
+      "password": "U2FsdGVkX19BdufI1uR88C97Qcys8zxtt8hS2v0f5ik=",
+      "profileImage": "assets/images/profilePictures/default.png",
+      "registerDate": "2021-12-30T03:44:27.957Z",
+      "id": 1
+    },
+    {
+      "firstName": "Samri",
+      "lastName": "Asres",
+      "username": "sam123",
+      "email": "sam123@gmail.com",
+      "password": "U2FsdGVkX1/upcRxC6fSjKE+X9NOGVIf8bIm8+CuZHA=",
+      "profileImage": "assets/images/profilePictures/default.png",
+      "registerDate": "2021-12-30T03:51:32.807Z",
+      "id": 2
+    },
+    {
+      "firstName": "Sarah",
+      "lastName": "Thomas",
+      "username": "sarahthomas",
+      "email": "sarahthomas@email.com",
+      "password": "U2FsdGVkX18AfpPdqeEV1jLC4CEEjcG2iAnKsF6sEcA=",
+      "profileImage": "assets/images/profilePictures/default.png",
+      "registerDate": "2021-12-30T06:55:53.823Z",
+      "id": 3
+    }
+  ],
+  "likes": [
+    {
+      "commentId": 1,
+      "username": "ela101",
+      "videoId": 2,
+      "id": 1
+    }
+  ],
+  "dislikes": [],
+  "subscribers": [
+    {
+      "subscribeTo": "sarahthomas",
+      "subscribeFrom": "ela101",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 0,
+      "responseTo": 0,
+      "body": "Finally I did it! ❤❤❤ It tool a lot of hard work and determination to get this thing done! Great job Elias! Hoping to learn React after this.",
+      "datePosted": "1/17/2022, 9:46:20 PM",
+      "id": 1
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 1,
+      "responseTo": 1,
+      "body": "I will learn all this and get into AirBnb as senior Software Engineer!",
+      "datePosted": "1/22/2022, 5:13:21 PM",
+      "id": 11
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 0,
+      "responseTo": 0,
+      "body": "updated another comment",
+      "datePosted": "1/22/2022, 11:41:32 PM",
+      "id": 12
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 0,
+      "responseTo": 0,
+      "body": "yet another comment",
+      "datePosted": "1/23/2022, 12:19:46 AM",
+      "id": 13
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 0,
+      "responseTo": 0,
+      "body": "some other comment",
+      "datePosted": "1/23/2022, 12:21:25 AM",
+      "id": 14
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 12,
+      "responseTo": 12,
+      "body": "reply test 2 updated",
+      "datePosted": "1/23/2022, 12:45:23 AM",
+      "id": 16
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 12,
+      "responseTo": 12,
+      "body": "yet another reply updated 2",
+      "datePosted": "1/23/2022, 12:59:38 AM",
+      "id": 17
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 12,
+      "responseTo": 12,
+      "body": "reply 4",
+      "datePosted": "1/23/2022, 1:03:34 AM",
+      "id": 18
+    },
+    {
+      "postedBy": "ela101",
+      "videoId": 2,
+      "parentCommentId": 1,
+      "responseTo": 11,
+      "body": "@ela101 here is a reply",
+      "datePosted": "1/23/2022, 7:51:05 PM",
+      "id": 19
+    }
+  ]
+}

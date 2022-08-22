@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.watchLeftColumn {
+  display: flex;
+  flex: 1;
+}
+
+.suggestion {
+  max-width: 425px;
+  flex-grow: 1;
+  height: 100%;
+  padding-left: 24px;
+}
+
+.playing-section {
+  flex: 1;
+  flex-direction: column;
+}

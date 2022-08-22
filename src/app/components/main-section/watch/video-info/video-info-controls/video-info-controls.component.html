@@ -1,0 +1,4 @@
+<div [ngClass]="stylesInput">
+  <app-button-provider [buttonInput]="likeButton" [additionalStyles]="additionalStyles" (buttonClickEvent)="handleLikeButtonClick($event)"></app-button-provider>
+  <app-button-provider [buttonInput]="dislikeButton" [additionalStyles]="additionalStyles" (buttonClickEvent)="handleDislikeButtonClick($event)"></app-button-provider>
+</div>

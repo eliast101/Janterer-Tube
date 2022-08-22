@@ -1,0 +1,5 @@
+<ng-container *ngIf="videoMetadata">
+  <video class="videoPlayer" controls>
+    <source [src]="videoMetadata.filePath" type="video/mp4">
+  </video>
+</ng-container>

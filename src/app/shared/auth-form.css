@@ -1,0 +1,92 @@
+.signInContainer {
+  background: #efefee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signInContainer .column .header img {
+  width: 100px;
+}
+
+.signInContainer .column {
+  flex-grow: 0;
+  padding: 20px 35px;
+  max-height: 100%;
+  width: 60%;
+  max-width: 450px;
+  overflow-y: auto;
+}
+
+.signInContainer .column .header {
+  padding: 20px 0;
+}
+
+.signInContainer .column .header h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 16px;
+}
+
+.signInContainer .column .header span {
+  font-size: 14px;
+}
+
+.signInContainer .column .loginForm {
+  padding-top: 24px;
+}
+
+.signInContainer .column .loginForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signInContainer .column .loginForm input[type='text'],
+.signInContainer .column .loginForm input[type='email'],
+.signInContainer .column .loginForm input[type='password'] {
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #dedede;
+  margin: 10px 0;
+}
+
+.signInContainer .column .loginForm input[type='submit'],
+.signInContainer .column .loginForm button[type='submit']{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 88px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: #4285f4;
+  border: none;
+  border-radius: 3px;
+  transition: 100ms ease-in-out;
+}
+
+.signInContainer .column .loginForm input[type='submit']:active,
+.signInContainer .column .loginForm button[type='submit']:active {
+  transform: scale(0.96);
+}
+
+.signInMessage {
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+}
+
+.errorMessage {
+  font-size: 12px;
+  font-weight: 300;
+  border: 1px solid red;
+  border-radius: 3px;
+  color: red;
+  text-align: center;
+  margin-bottom: 2px;
+}
+

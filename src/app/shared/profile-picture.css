@@ -1,0 +1,30 @@
+/* if you want to apply a specific style for profilePictureButton, add style here and bind the css class used here in the parent component that uses the profile-picture-component */
+
+:host .profilePicture {
+  margin-right: 16px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+:host .profile-picture-md {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+:host .profile-picture-sm {
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Example below how to add specific style */
+/*:host .commentProfilePicture {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}*/

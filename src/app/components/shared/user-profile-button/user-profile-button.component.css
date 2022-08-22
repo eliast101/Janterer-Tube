@@ -1,0 +1,17 @@
+:host .profilePicture {
+  height: 100%;
+}
+
+/*:host .secondaryInfo .topRow .profilePicture {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}*/
+
+/*:host .profilePicture {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}*/

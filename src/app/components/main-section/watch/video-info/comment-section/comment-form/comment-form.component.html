@@ -1,0 +1,20 @@
+<div class="commentForm">
+  <div class="commentTop">
+    <app-user-profile-button [profilePicture]="'assets/images/profilePictures/default.png'" [styleClasses]="profilePictureClass"></app-user-profile-button>
+    <textarea
+      #refTextArea
+      (input)="emitCommentTextChange(refTextArea)"
+      (focus)="onCommentAreaFocus($event)"
+      name="comment"
+      id="comment-form"
+      class="commentBody"
+      placeholder="Add a public comment"
+      [(ngModel)]="commentValue">
+    </textarea>
+    <input name="hiddenComment" [(ngModel)]="replyToBeEdited" hidden>
+  </div>
+  <div class="commentBottom" *ngIf="displayCommentButtons">
+    <app-button-provider [buttonInput]="cancelBtnInput" (buttonClickEvent)="handleCancelButton($event, refTextArea, replyToBeEdited)"></app-button-provider>
+    <app-button-provider [buttonInput]="commentBtnInput" [replyButtonActive]="displayReplyInput" (buttonClickEvent)="handleCommentButton($event, refTextArea)"></app-button-provider>
+  </div>
+</div>

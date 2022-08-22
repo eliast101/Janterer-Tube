@@ -1,0 +1,55 @@
+<div class="comment-main-container">
+  <div class="comment-profile-image">
+    <app-user-profile-button
+      [styleClasses]="profilePictureClass"
+      [profilePicture]="'assets/images/profilePictures/default.png'">
+    </app-user-profile-button>
+  </div>
+  <div class="comment-right">
+    <div class="comment-header">
+      <a>
+        <span class="username">{{ commentData?.postedBy }}</span>
+      </a>
+      <span class="comment-duration">{{ timeAgo }}</span>
+    </div>
+    <div class="comment-body">
+      <p>{{ commentData?.body }}</p>
+    </div>
+    <div class="comment-buttons">
+      <app-video-info-controls
+        [stylesInput]="['comment-controls']"
+        [additionalStyles]="['like-icon-sm']"
+        [videoInfoForCtrl]="videoData"
+        [commentInput]="commentData"
+        [controlType]="'comment'"></app-video-info-controls>
+      <button class="reply-btn" (click)="showReplyForm(commentData)">REPLY</button>
+    </div>
+    <!-- below hidden property is needed because if we use *ngIf it will remove the element all together and all bindings will not happen -->
+    <app-comment-form
+      [hidden]="!displayReplyForm"
+      [displayReplyInput]="replyInputActive"
+      [parentComment]="parentComment"
+      [responseToComment]="responseToComment"
+      [videoData]="videoData"
+      [replyToBeEdited]="commentData"
+      [profilePictureClass]="['profile-picture-sm']">
+    </app-comment-form>
+  </div>
+  <button class="dotted-btn" (click)="toggleEditPopUp(commentData, $event)">
+    <span class="dots">
+      <img src="assets/images/icons/three_dots_icon.png" alt="Three dots icon vertical">
+    </span>
+  </button>
+  <div *ngIf="showEditPopUp" class="edit-pop-up" (click)="$event.stopPropagation()">
+    <div class="edit-btn-container">
+      <button class="edit-btn" (click)="editComment(commentData)">
+        <span class="btn-icon"><fa-icon [icon]="faPenFancy"></fa-icon></span><span class="btn-text">Edit</span>
+      </button>
+    </div>
+    <div class="delete-btn-container">
+      <button class="edit-btn" (click)="deleteComment(commentData)">
+        <span class="btn-icon"><fa-icon [icon]="faTrashAlt"></fa-icon></span><span class="btn-text">Delete</span>
+      </button>
+    </div>
+  </div>
+</div>

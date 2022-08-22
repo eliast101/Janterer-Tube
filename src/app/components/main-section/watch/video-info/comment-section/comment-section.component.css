@@ -1,0 +1,120 @@
+:host {
+  flex: 1;
+}
+
+.commentSection {
+  flex: 1;
+}
+
+.comments-container {
+  flex: 1;
+}
+
+.commentSection .header {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentSection .header .commentCount {
+  margin-bottom: 24px;
+}
+
+.replies {
+  margin-left: 64px;
+}
+
+.toggle-show-replies {
+  cursor: pointer;
+  text-decoration: none;
+  color: #065fd4;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 64px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.left-arrow {
+  margin-right: 8px;
+}
+
+.delete-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal {
+  background: #fff;
+  width: 270px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  text-indent: 24px;
+  line-height: 45px;
+  border-radius: 3px;
+}
+
+.delete-modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212529;
+  padding-top: 12px;
+  padding-bottom: -8px;
+}
+
+.delete-modal-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  padding-bottom: 10px;
+}
+
+.delete-modal-buttons {
+  border-top: 1px solid #cccccc;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+.delete-modal-buttons span a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #065fd4;
+  cursor: pointer;
+}
+
+.delete-modal-buttons span {
+  margin-top: 4px;
+  margin-left: 16px;
+}
+
+.show-delete-modal {
+  display: flex;
+}
+
+.comment-deleted-info {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background: #323232;
+  color: #fff;
+  font-size: 14px;
+  width: 280px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  text-indent: 28px;
+  border-radius: 3px;
+}
+

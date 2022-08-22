@@ -1,0 +1,12 @@
+<div class="pageContainer">
+  <app-mast-head></app-mast-head>
+  <app-side-nav></app-side-nav>
+  <div id="mainSectionContainer" [ngClass]="{leftPadding: showHideSideNav}">
+    <div id="mainContentContainer">
+      <!--<p *ngIf="loggedInUser">Hello {{ loggedInUser }}!</p>
+      <p *ngIf="!loggedInUser">Not logged in</p>-->
+      <!--<app-watch></app-watch>-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

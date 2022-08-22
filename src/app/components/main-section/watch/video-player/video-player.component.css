@@ -1,0 +1,8 @@
+.videoPlayer {
+  width: 100%;
+}
+
+:host {
+  display: flex;
+  flex: 1;
+}

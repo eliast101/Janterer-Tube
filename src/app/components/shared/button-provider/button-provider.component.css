@@ -1,0 +1,28 @@
+:host button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(17, 17, 17, 0.4);
+  margin-right: 10px;
+}
+
+:host button .text {
+  /*margin-right: 8px;*/
+  text-align: center;
+}
+
+/*:host button:focus,
+:host button:active {
+  outline: none;
+}*/
+
+:host img {
+  height: 20px;
+  width: 20px;
+  /*margin: 4px 8px 8px 8px;*/
+  margin-right: 8px;
+}
+
+

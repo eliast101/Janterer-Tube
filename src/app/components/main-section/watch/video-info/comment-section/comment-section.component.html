@@ -1,0 +1,74 @@
+<div class="commentSection">
+  <div class="header">
+    <span class="commentCount">{{ commentsCount }} Comments</span>
+    <app-comment-form
+      [videoData]="videoData"
+      (newComment$)="onNewComment($event)"
+      (updateComment$)="onUpdateComment($event)"
+      [commentValue]="parentCommentToBeEdited?.body"
+      [parentCommentToBeEdited]="parentCommentToBeEdited"
+      [displayCommentButtons]="parentCommentToBeEdited !== undefined"
+      [profilePictureClass]="['profilePicture']">
+    </app-comment-form>
+  </div>
+  <div class="comments-container">
+    <ng-container *ngFor="let comment of comments; let i = index">
+      <ng-container *ngIf="comment">
+        <!-- Here since this is top level parent comment, both parentComment and replyToComment is same -->
+        <app-comment
+          [videoData]="videoData"
+          [commentData]="comment"
+          [parentComment]="comment"
+          [responseToComment]="comment"
+          [profilePictureClass]="['profile-picture-md']">
+        </app-comment>
+      </ng-container>
+      <ng-container *ngFor="let parentToChildItem of parentIdToRepliesMap">
+        <ng-container *ngIf="comment && parentToChildItem && parentToChildItem.parentCommentId === comment.id">
+          <ng-container *ngIf=" parentToChildItem.replies">
+            <a *ngIf="parentToChildItem.replies.length > 0" (click)="toggleShowReplies(comment, i)" class="toggle-show-replies">
+              <span class="left-arrow">
+                <fa-icon [icon]="(parentCommentIndexToggleMap.indexOf(i) > -1) ? faCaretUp: faCaretDown"></fa-icon>
+              </span>
+              <span>
+                {{ (parentCommentIndexToggleMap.indexOf(i) > -1) ? 'Hide': 'View' }}
+                {{ parentToChildItem.replies.length === 1 ? '': parentToChildItem.replies.length }}
+                {{ parentToChildItem.replies.length === 1 ? 'reply': 'replies' }}
+              </span>
+            </a>
+            <br>
+            <ng-container *ngIf="parentCommentIndexToggleMap.indexOf(i) > -1">
+              <div class="replies" *ngFor="let reply of parentToChildItem.replies">
+                <!-- Here top level parent comment would be the the one in first for loop and replyToComment would be the reply object -->
+                <app-comment
+                  [videoData]="videoData"
+                  [commentData]="reply"
+                  [parentComment]="comment"
+                  [responseToComment]="reply"
+                  [profilePictureClass]="['profile-picture-sm']">
+                </app-comment>
+              </div>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div  class="delete-modal-bg" *ngIf="showDeleteModal" [@fadeInOut]>
+    <div class="delete-modal">
+      <div class="delete-modal-title">Delete comment</div>
+      <div class="delete-modal-body">Delete your comment permanently?</div>
+      <div class="delete-modal-buttons">
+        <span>
+          <a (click)="cancelDeleteComment(commentForModal)">CANCEL</a>
+        </span>
+        <span>
+          <a (click)="deleteCommentDecided(commentForModal)">DELETE</a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showCommentDeletedInfo" class="comment-deleted-info" [@fadeInOutInfo]>
+    <span class="message">Comment deleted</span>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+:host .video-controls {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+:host .comment-controls {
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+}
+
+/*:host {
+  flex: 1;
+}*/

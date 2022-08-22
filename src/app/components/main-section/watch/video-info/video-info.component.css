@@ -1,0 +1,101 @@
+.videoInfo {
+  width: 100%;
+  padding: 20px 0 8px 0;
+}
+
+.videoInfo h1 {
+  font-size: 18px;
+  font-weight: 400;
+  overflow: hidden;
+  line-height: 24px;
+}
+
+.videoInfo .bottomSection {
+  display: flex;
+}
+
+.videoInfo .bottomSection .viewCount {
+  flex: 1;
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.secondaryInfo .topRow {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.profilePicture {
+  height: 100%;
+}
+
+.secondaryInfo .topRow .profilePicture {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.secondaryInfo .topRow .uploadInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.secondaryInfo .topRow .uploadInfo .subscribersCount {
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.secondaryInfo .descriptionContainer {
+  margin-left: 64px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  max-width: 615px;
+}
+
+.secondaryInfo {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.secondaryInfo .topRow .button {
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  border: none;
+}
+
+.secondaryInfo .topRow .subscribeButtonContainer,
+.secondaryInfo .topRow .editVideoButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subscribeButtonContainer .subscribe {
+  background: #cc0000;
+  color: #ffffff;
+}
+
+.subscribeButtonContainer .unsubscribe {
+  background: #0000000d;
+  color: #606060;
+}
+
+.editVideoButtonContainer .edit {
+  background: #2692e6;
+  color: #fff;
+}
+
+.secondaryInfo .topRow .uploadInfo .owner a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
